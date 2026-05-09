@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@font-face {
+    font-family: 'Barlow';
+    src: url(../font/Barlow/Barlow-Light.ttf);
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-image: url(../image/hedergb.jpg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 369px;
+
+
+    .header-top {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35%;
+        padding-top: 25px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: xxx-large;
+        font-family: "Courier Prime", monospace;
+        color: white;
+    }
+
+    .logo img {
+        padding: 7px;
+        width: 100px;
+        border-radius: 25pc;
+        border: 2px solid white;
+    }
+
+    .headt {
+        display: flex;
+        gap: 25px;
+    }
+
+    hr {
+        margin: 0 60px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .headt a {
+        color: white;
+        font-family: "Coming Soon", cursive;
+        font-size: xx-large;
+    }
+
+    .slowgan p {
+        font-family: "Borel", cursive;
+        color: white;
+        font-size: xx-large;
+        padding: 40px;
+    }
+
+    .slowgan {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        margin: 20px 0px;
+    }
+}
+
+main {
+    hr {
+        border: none;
+        height: 1px;
+        background: black;
+        margin: 10px 5px;
+    }
+
+    .icon {
+        border: 2px solid black;
+        border-radius: 25px;
+        margin-left: 10px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Barlow';
+        letter-spacing: 5px;
+    }
+    .Card{
+        width: 231px ;
+        height: 372px ;
+        border: 2px solid black;
+        border-radius: 25px;
+    }
+    .Post{
+        display: flex;
+        justify-content: space-between;
+        padding: 47px;
+        gap: 21;
+    }
+}
+
+
+footer {
+    background-image: url(../image/foterbg.jpg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 197px;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+
+
+   
+}
