@@ -1,9 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Borel&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@font-face {
+    font-family: 'Lexend';
+    src: url(../font/Lexend/Lexend-VariableFont_wght.ttf);
+}
+
 @font-face {
     font-family: 'Barlow';
     src: url(../font/Barlow/Barlow-Light.ttf);
 }
+
+@font-face {
+    font-family: 'AnonymousPro';
+    src: url(../font/AnonymousPro/AnonymousPro-Regular.ttf);
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -11,9 +20,8 @@
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
-    width: 100vw;
+    overflow-x: hidden;
+    width: 100%;
     height: 100vh;
 }
 
@@ -23,8 +31,8 @@ header {
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 369px;
-    
+    height: 493px;
+
 
     .header-top {
         display: flex;
@@ -32,24 +40,41 @@ header {
         align-items: center;
         gap: 35%;
         padding-top: 25px;
-        padding-bottom: 10px;
+        height: 150px;
+        padding: 0px 64px;
     }
 
     .logo {
-        width: 50%;
+        width: 50em;
         display: flex;
         align-items: center;
         gap: 10px;
-        font-size: xxx-large;
-        font-family: "Courier Prime", monospace;
+        font-size: x-large;
         color: white;
+    }
+
+    .logo>pre {
+        font-family: "Lexend";
     }
 
     .logo img {
         padding: 7px;
-        width: 100px;
+        width: 70px;
         border-radius: 25pc;
         border: 2px solid white;
+    }
+
+    .hln{
+        padding-bottom: 14px;
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 14px;
+    }
+    .hln > hr{
+        width: 460px;
     }
 
     .headt {
@@ -58,28 +83,29 @@ header {
     }
 
     hr {
-        margin: 0 60px;
+        margin: 0 26px;
         border: 1px solid rgba(255, 255, 255, 0.7);
     }
 
     .headt a {
         color: white;
-        font-family: "Coming Soon", cursive;
-        font-size: xx-large;
+        font-family: "AnonymousPro";
+        font-size: x-large;
+        text-decoration: none;
     }
 
-    .slowgan p {
-        font-family: "Borel", cursive;
-        color: white;
-        font-size: xx-large;
-        padding: 40px;
+    .headt>ul {
+        gap: 35px;
+        display: flex;
+        list-style: none;
+        padding: none;
     }
 
     .slowgan {
         display: flex;
         justify-content: center;
-        text-align: center;
-        margin: 20px 0px;
+        align-items: center;
+        padding-top: 51px;
     }
 }
 
@@ -101,15 +127,20 @@ main {
         font-family: 'Barlow';
         letter-spacing: 5px;
     }
-    .Card{
-        width: 231px ;
-        height: 372px ;
+
+    .Card {
+        width: 231px;
+        height: 372px;
         border: 2px solid black;
         border-radius: 25px;
-    }
-    .Post{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Post {
+        display: flex;
+        justify-content: center;
         padding: 47px;
         gap: 21;
     }
@@ -127,6 +158,4 @@ footer {
     flex-direction: column;
     min-height: 250px;
 
-
-   
 }
