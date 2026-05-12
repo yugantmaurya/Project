@@ -148,20 +148,26 @@ main {
     }
 
     .icon {
+        
         border: 2px solid black;
         border-radius: 25px;
-        margin-left: 10px;
-        width: 100px;
+        margin-top: 30px;
+        margin-left: 50px;
+        width: 255px;
+        height: 55px;
         display: flex;
         justify-content: center;
+        align-items: center;
+        font-size: x-large;
         font-family: 'Barlow';
-        letter-spacing: 5px;
+        letter-spacing: 10px;
+        
     }
 
     .Card {
-        width: 231px;
+        width: 321px;
         height: 372px;
-        border: 2px solid black;
+        border: 2px solid #4194AA;
         border-radius: 25px;
         display: flex;
         justify-content: center;
@@ -170,9 +176,10 @@ main {
 
     .Post {
         display: flex;
+        flex-direction: row;
         justify-content: center;
-        padding: 47px;
-        gap: 21;
+        padding: 32px 56px;
+        gap: 21px;
     }
 }
 
