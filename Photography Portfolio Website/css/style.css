@@ -4,6 +4,21 @@
 }
 
 @font-face {
+    font-family: 'ldtihn';
+    src: url(../font/Lexend/static/Lexend-Light.ttf);
+}
+
+@font-face {
+    font-family: 'ledger';
+    src: url(../font/Ledger/Ledger-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'bitter';
+    src: url(../font/Bitter/Bitter-VariableFont_wght.ttf);
+}
+
+@font-face {
     font-family: 'Barlow';
     src: url(../font/Barlow/Barlow-Light.ttf);
 }
@@ -192,7 +207,70 @@ main {
         padding: 32px 56px;
         gap: 21px;
     }
+
+    .intro {
+        display: flex;
+        height: 520px;
+
+        .image-logo {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-me {
+            width: 50%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            padding: 65px 0px;
+            gap: 18px;
+
+            .me,
+            .Contact {
+                font-size: xxx-large;
+                text-align: center;
+                padding: 20px 0px;
+                font-family: 'ldtihn';
+                border: 2px solid black;
+                border-radius: 25px;
+                width: 295px;
+                height: 100px;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                border: 2px solid black;
+                width: 487px;
+                height: 160px;
+                padding: 20px 31px;
+                border-radius: 25px;
+                gap: 3px;
+
+                h2 {
+                    font-family: 'ldtihn';
+                    text-decoration: underline;
+                }
+
+                h4 {
+                    font-family: 'ledger';
+                }
+
+                p {
+                    font-family: 'bitter';
+                }
+            }
+
+            .Contact {
+                width: 487px;
+                font-family: 'Barlow';
+            }
+        }
+    }
 }
+
 
 
 footer {
@@ -222,7 +300,7 @@ footer {
         height: 113px;
         font-size: large;
         justify-content: space-between;
-        padding: 0 59px ;
+        padding: 0 59px;
 
         .copyright {
             color: white;
