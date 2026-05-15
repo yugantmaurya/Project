@@ -208,6 +208,17 @@ main {
         gap: 21px;
     }
 
+    .tool{
+        .tool-section{
+            padding: 66px 45px;
+
+            img{
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+
     .intro {
         display: flex;
         height: 520px;
