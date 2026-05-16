@@ -208,13 +208,40 @@ main {
         gap: 21px;
     }
 
-    .tool{
-        .tool-section{
+    .tool {
+        .tool-section {
+            display: grid;
+            grid-template-columns: repeat(2, 631px);
+            grid-auto-rows: auto;
+            gap: 63px 20px;
             padding: 66px 45px;
 
-            img{
+            .tool-info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 92px;
+                height: 92px;
+                padding: 20px;
+                border: 2px solid black;
+                border-radius: 20px;
+                margin-left: 10px;
+            }
+
+            img {
                 width: 72px;
                 height: 72px;
+                border-radius: 20px;
+                margin-left: px;
+            }
+
+            .bdr {
+                display: flex;
+                align-items: center;
+                border: 2px solid #4194AA;
+                width: 631px;
+                height: 113px;
+                border-radius: 25px;
             }
         }
     }
