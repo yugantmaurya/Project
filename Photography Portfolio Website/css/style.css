@@ -255,6 +255,24 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            .left{
+                position: absolute;
+                z-index: 1px;
+                left: 487px;
+                top: 1576px;
+            }
+
+            #right{
+                position: absolute;
+                z-index: 1px;
+                left: 87px;
+                top: 1942px;
+            }
+
+            img{
+                border-radius: 25px;
+            }
         }
 
         .about-me {
