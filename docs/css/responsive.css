@@ -1,0 +1,224 @@
+img {
+    
+    height: auto;
+}
+
+body {
+    min-height: 100vh;
+    height: auto;
+}
+
+header .logo {
+    min-width: 0;
+}
+
+header .logo pre {
+    white-space: pre-wrap;
+}
+
+
+main .tool .tool-section {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+main .tool .tool-section .bdr {
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    header .header-top {
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    main .intro .image-logo .left,
+    main .intro .image-logo #right {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        height: auto;
+        min-height: 493px;
+        padding-bottom: 40px;
+    }
+
+    header .header-top {
+        height: auto;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px 20px;
+    }
+
+    header .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    header .hln,
+    header .hln > hr {
+        width: 100%;
+    }
+
+    header .headt > ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px 28px;
+    }
+
+    header .slowgan {
+        width: min(92%, 617px);
+        margin: 36px auto;
+    }
+
+    header .slowgan img,
+    header .text {
+        width: 100%;
+    }
+
+    header .text {
+        height: auto;
+        gap: 24px;
+        padding: 0 24px;
+        font-size: clamp(0.85rem, 2.4vw, 1rem);
+    }
+
+    main .icon {
+        margin-left: 20px;
+    }
+
+    main .Post {
+        padding: 28px 20px;
+    }
+
+    main .tool .tool-section {
+        padding: 36px 20px;
+        gap: 22px;
+    }
+
+    main .intro {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 20px;
+        gap: 28px;
+    }
+
+    main .intro .image-logo,
+    main .intro .about-me {
+        width: 100%;
+    }
+
+    main .intro .about-me {
+        align-items: center;
+        padding: 0;
+    }
+
+    main .intro .about-me div,
+    main .intro .about-me .Contact {
+        width: min(100%, 487px);
+        height: auto;
+    }
+
+    footer .fot-bar {
+        height: auto;
+        min-height: 113px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    footer .fot-bar .lfoot ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 560px) {
+    header .logo {
+        font-size: 1rem;
+    }
+
+    header .logo img {
+        width: 58px;
+    }
+
+    header .headt a {
+        font-size: 1rem;
+    }
+
+    header .text {
+        gap: 12px;
+        font-size: 0.75rem;
+    }
+
+    main .icon {
+        width: calc(100% - 40px);
+        max-width: 255px;
+        font-size: 1.1rem;
+        letter-spacing: 6px;
+    }
+
+    main .Card {
+        width: min(100%, 321px);
+        height: 300px;
+    }
+
+    main .tool .tool-section {
+        grid-template-columns: 1fr;
+    }
+
+    main .tool .tool-section .bdr {
+        height: 96px;
+        border-radius: 18px;
+    }
+
+    main .tool .tool-section .tool-info {
+        width: 76px;
+        height: 76px;
+        padding: 12px;
+        border-radius: 16px;
+    }
+
+    main .tool .tool-section img {
+        width: 56px;
+        height: 56px;
+    }
+
+    main .intro .image-logo img:not(.left):not(#right) {
+        width: min(100%, 342px);
+    }
+
+    main .intro .about-me .me,
+    main .intro .about-me .Contact {
+        width: min(100%, 295px);
+        height: auto;
+        font-size: 2rem;
+    }
+
+    main .intro .about-me div {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    header .headt > ul {
+        gap: 12px 18px;
+    }
+
+    header .slowgan {
+        width: 96%;
+    }
+
+    header .text {
+        font-size: 0.68rem;
+        padding: 0 16px;
+    }
+
+    footer .fot-bar {
+        font-size: 0.9rem;
+    }
+}

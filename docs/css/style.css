@@ -232,7 +232,6 @@ main {
                 width: 72px;
                 height: 72px;
                 border-radius: 20px;
-                margin-left: px;
             }
 
             .bdr {
@@ -256,21 +255,19 @@ main {
             justify-content: center;
             align-items: center;
 
-            .left{
-                position: absolute;
+            .left {
                 z-index: 1px;
                 left: 487px;
                 top: 1576px;
             }
 
-            #right{
-                position: absolute;
+            #right {
                 z-index: 1px;
                 left: 87px;
                 top: 1942px;
             }
 
-            img{
+            img {
                 border-radius: 25px;
             }
         }
