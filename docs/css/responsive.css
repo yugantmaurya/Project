@@ -46,6 +46,10 @@ main .tool .tool-section .bdr {
         padding: 24px 20px;
     }
 
+    .header-top .hln{
+        width: 200px;
+    }
+
     .hideonmobile,
     .navhr {
         display: none;
@@ -145,8 +149,8 @@ main .tool .tool-section .bdr {
     }
 
     header .text {
-        gap: 12px;
-        font-size: 0.75rem;
+        gap: 25px;
+        font-size: 0.65rem;
     }
 
     main .icon {
@@ -199,8 +203,11 @@ main .tool .tool-section .bdr {
 }
 
 @media (max-width: 380px) {
-    header .headt>ul {
-        gap: 12px 18px;
+    
+     header .header-top {
+        height: auto;
+        gap: 24px;
+        padding: 14px 20px;
     }
 
     header .slowgan {
@@ -208,7 +215,7 @@ main .tool .tool-section .bdr {
     }
 
     header .text {
-        font-size: 0.68rem;
+        font-size: 0.65rem;
         padding: 0 16px;
     }
 
