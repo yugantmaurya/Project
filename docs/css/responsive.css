@@ -19,6 +19,11 @@ main .tool .tool-section .bdr {
     width: 100%;
 }
 
+ .menu {
+        display: none;
+    }
+
+
 @media (max-width: 1200px) {
     header .header-top {
         gap: 40px;
@@ -38,8 +43,6 @@ main .tool .tool-section .bdr {
         padding-bottom: 40px;
     }
 
-
-
     header .header-top {
         height: auto;
         gap: 24px;
@@ -48,6 +51,8 @@ main .tool .tool-section .bdr {
 
     .header-top .hln{
         width: 200px;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .hideonmobile,
@@ -57,7 +62,7 @@ main .tool .tool-section .bdr {
 
     header .logo {
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .headt .menu {
