@@ -39,7 +39,6 @@ main .tool .tool-section .bdr {
 @media (max-width: 900px) {
     header {
         height: auto;
-        min-height: 493px;
         padding-bottom: 40px;
     }
 
@@ -141,6 +140,7 @@ main .tool .tool-section .bdr {
 }
 
 @media (max-width: 560px) {
+
     header .logo {
         font-size: 1rem;
     }
@@ -220,7 +220,7 @@ main .tool .tool-section .bdr {
     }
 
     header .text {
-        font-size: 0.65rem;
+        font-size: 0.60rem;
         padding: 0 16px;
     }
 
