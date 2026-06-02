@@ -11,11 +11,6 @@ header .logo {
     min-width: 0;
 }
 
-header .logo pre {
-    white-space: pre-wrap;
-}
-
-
 main .tool .tool-section {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
@@ -43,11 +38,17 @@ main .tool .tool-section .bdr {
         padding-bottom: 40px;
     }
 
+
+
     header .header-top {
         height: auto;
-        flex-direction: column;
         gap: 24px;
         padding: 24px 20px;
+    }
+
+    .hideonmobile,
+    .navhr {
+        display: none;
     }
 
     header .logo {
@@ -55,15 +56,9 @@ main .tool .tool-section .bdr {
         justify-content: center;
     }
 
-    header .hln,
-    header .hln > hr {
-        width: 100%;
-    }
-
-    header .headt > ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px 28px;
+    .headt .menu {
+        display: flex;
+        justify-content: flex-end;
     }
 
     header .slowgan {
@@ -204,7 +199,7 @@ main .tool .tool-section .bdr {
 }
 
 @media (max-width: 380px) {
-    header .headt > ul {
+    header .headt>ul {
         gap: 12px 18px;
     }
 
