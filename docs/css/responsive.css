@@ -19,9 +19,9 @@ main .tool .tool-section .bdr {
     width: 100%;
 }
 
- .menu {
-        display: none;
-    }
+.menu {
+    display: none;
+}
 
 
 @media (max-width: 1200px) {
@@ -48,7 +48,7 @@ main .tool .tool-section .bdr {
         padding: 24px 20px;
     }
 
-    .header-top .hln{
+    .header-top .hln {
         width: 200px;
         display: flex;
         justify-content: flex-end;
@@ -112,15 +112,27 @@ main .tool .tool-section .bdr {
         width: 100%;
     }
 
+    main .intro {
+        display: flex;
+
+        .box1 {
+            order: 2;
+        }
+    }
+
     main .intro .about-me {
-        align-items: center;
-        padding: 0;
+        padding: 10px;
+        font-size: .8rem;
     }
 
     main .intro .about-me div,
     main .intro .about-me .Contact {
         width: min(100%, 487px);
         height: auto;
+    }
+
+    main .intro .about-me .Contact {
+        width: min(100%, 387px);
     }
 
     footer .fot-bar {
@@ -195,11 +207,16 @@ main .tool .tool-section .bdr {
         width: min(100%, 342px);
     }
 
-    main .intro .about-me .me,
-    main .intro .about-me .Contact {
-        width: min(100%, 295px);
+    main .intro .about-me .me {
+        width: min(100%, 205px);
         height: auto;
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    main .intro .about-me .Contact {
+        width: min(100%, 275px);
+        height: auto;
+        font-size: 1.5rem;
     }
 
     main .intro .about-me div {
@@ -208,8 +225,8 @@ main .tool .tool-section .bdr {
 }
 
 @media (max-width: 380px) {
-    
-     header .header-top {
+
+    header .header-top {
         height: auto;
         gap: 24px;
         padding: 14px 20px;
