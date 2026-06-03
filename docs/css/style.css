@@ -236,6 +236,7 @@ main {
     }
 
     .tool {
+        min-height: 524px;
         .tool-section {
             display: grid;
             grid-template-columns: repeat(2, 631px);

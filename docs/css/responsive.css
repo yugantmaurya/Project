@@ -107,7 +107,10 @@ main .tool .tool-section .bdr {
         gap: 28px;
     }
 
-    main .intro .image-logo,
+    main .intro .image-logo{
+        display: none;
+    }
+
     main .intro .about-me {
         width: 100%;
     }
@@ -172,7 +175,7 @@ main .tool .tool-section .bdr {
 
     main .icon {
         width: calc(100% - 40px);
-        max-width: 255px;
+        max-width: 200px;
         font-size: 1.1rem;
         letter-spacing: 6px;
     }
