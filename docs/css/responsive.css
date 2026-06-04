@@ -23,6 +23,10 @@ main .tool .tool-section .bdr {
     display: none;
 }
 
+.sublogo{
+    display: none;
+}
+
 
 @media (max-width: 1200px) {
     header .header-top {
@@ -30,10 +34,19 @@ main .tool .tool-section .bdr {
         justify-content: space-between;
     }
 
-    main .intro .image-logo .left,
-    main .intro .image-logo #right {
-        display: none;
+    main .intro .about-me{
+        width: 450px;
     }
+
+    main .intro .about-me .Contact,
+    main .intro .about-me div {
+        width: 410px;
+    }
+
+    main .intro .image-logo img{
+        width: 480px;
+    }
+
 }
 
 @media (max-width: 900px) {
@@ -94,6 +107,10 @@ main .tool .tool-section .bdr {
         padding: 28px 20px;
     }
 
+    main .c1 {
+        display: none;
+    }
+
     main .tool .tool-section {
         padding: 36px 20px;
         gap: 22px;
@@ -101,7 +118,7 @@ main .tool .tool-section .bdr {
 
     main .intro {
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         padding: 15px 20px;
         gap: 28px;
@@ -125,17 +142,44 @@ main .tool .tool-section .bdr {
 
     main .intro .about-me {
         padding: 10px;
+        width: 487px;
         font-size: .8rem;
+    }
+
+    main .intro .sublogo{
+        display: flex;
+        justify-content: center;
+        width: 350px;
     }
 
     main .intro .about-me div,
     main .intro .about-me .Contact {
-        width: min(100%, 487px);
+        width: min(100%, 437px);
         height: auto;
     }
 
+     main .intro .about-me .Contact {
+        p{
+            font-family: 0.8em;
+        }
+    }
+
+    main .intro .about-me .me{
+        width:200px ;
+        font-size: x-large;
+        height: 70px;
+    }
+
     main .intro .about-me .Contact {
-        width: min(100%, 387px);
+        width: min(100%, 307px);
+        font-size: x-large;
+        height: 70px;
+    }
+
+    main .intro .sublogo img{
+        width: 250px;
+        border-radius: 25px;
+
     }
 
     footer .fot-bar {
@@ -180,6 +224,10 @@ main .tool .tool-section .bdr {
         letter-spacing: 6px;
     }
 
+    main .c2 {
+        display: none;
+    }
+
     main .Card {
         width: min(100%, 321px);
         height: 300px;
@@ -208,6 +256,10 @@ main .tool .tool-section .bdr {
 
     main .intro .image-logo img:not(.left):not(#right) {
         width: min(100%, 342px);
+    }
+
+    main .intro .sublogo {
+        display: none;
     }
 
     main .intro .about-me .me {
