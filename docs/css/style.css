@@ -52,7 +52,7 @@
 body {
     overflow-x: hidden;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header {
@@ -129,7 +129,6 @@ header {
         gap: 35px;
         display: flex;
         list-style: none;
-        padding: none;
     }
 
     .slidebar {
@@ -235,8 +234,30 @@ main {
         gap: 21px;
     }
 
+    .imbo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 25px;
+        padding: 4px;
+        border: 2px solid black;
+        height: 342px;
+        width: 291px;
+        overflow: hidden;
+
+        .po-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 21px;
+        }
+    }
+
+
     .tool {
         min-height: 524px;
+
         .tool-section {
             display: grid;
             grid-template-columns: repeat(2, 631px);
@@ -282,18 +303,6 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
-
-            .left {
-                z-index: 1px;
-                left: 487px;
-                top: 1576px;
-            }
-
-            #right {
-                z-index: 1px;
-                left: 87px;
-                top: 1942px;
-            }
 
             img {
                 border-radius: 25px;

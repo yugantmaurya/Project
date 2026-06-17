@@ -4,7 +4,6 @@ img {
 
 body {
     min-height: 100vh;
-    height: auto;
 }
 
 header .logo {
@@ -23,8 +22,17 @@ main .tool .tool-section .bdr {
     display: none;
 }
 
-.sublogo{
+.sublogo {
     display: none;
+}
+
+
+@media (max-width: 1370px){
+
+    main .c3{
+        display: none;
+    }
+    
 }
 
 
@@ -34,7 +42,7 @@ main .tool .tool-section .bdr {
         justify-content: space-between;
     }
 
-    main .intro .about-me{
+    main .intro .about-me {
         width: 450px;
     }
 
@@ -43,10 +51,16 @@ main .tool .tool-section .bdr {
         width: 410px;
     }
 
-    main .intro .image-logo img{
+    main .intro .image-logo img {
         width: 480px;
     }
 
+}
+
+@media (max-width: 1130px){
+     main .c1 {
+        display: none;
+    }
 }
 
 @media (max-width: 900px) {
@@ -107,10 +121,6 @@ main .tool .tool-section .bdr {
         padding: 28px 20px;
     }
 
-    main .c1 {
-        display: none;
-    }
-
     main .tool .tool-section {
         padding: 36px 20px;
         gap: 22px;
@@ -132,21 +142,13 @@ main .tool .tool-section .bdr {
         width: 100%;
     }
 
-    main .intro {
-        display: flex;
-
-        .box1 {
-            order: 2;
-        }
-    }
-
     main .intro .about-me {
         padding: 10px;
         width: 487px;
         font-size: .8rem;
     }
 
-    main .intro .sublogo{
+    main .intro .sublogo {
         display: flex;
         justify-content: center;
         width: 350px;
@@ -158,14 +160,8 @@ main .tool .tool-section .bdr {
         height: auto;
     }
 
-     main .intro .about-me .Contact {
-        p{
-            font-family: 0.8em;
-        }
-    }
-
-    main .intro .about-me .me{
-        width:200px ;
+    main .intro .about-me .me {
+        width: 200px;
         font-size: x-large;
         height: 70px;
     }
@@ -176,7 +172,7 @@ main .tool .tool-section .bdr {
         height: 70px;
     }
 
-    main .intro .sublogo img{
+    main .intro .sublogo img {
         width: 250px;
         border-radius: 25px;
 
@@ -228,11 +224,6 @@ main .tool .tool-section .bdr {
         display: none;
     }
 
-    main .Card {
-        width: min(100%, 321px);
-        height: 300px;
-    }
-
     main .tool .tool-section {
         grid-template-columns: 1fr;
     }
@@ -254,7 +245,7 @@ main .tool .tool-section .bdr {
         height: 56px;
     }
 
-    main .intro .image-logo img:not(.left):not(#right) {
+    main .intro .image-logo img {
         width: min(100%, 342px);
     }
 
