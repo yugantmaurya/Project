@@ -217,6 +217,7 @@ main {
     }
 
     .Card {
+        flex: 0 0 321px;
         width: 321px;
         height: 372px;
         border: 2px solid #4194AA;
@@ -227,11 +228,60 @@ main {
     }
 
     .Post {
+        --slider-gap: 21px;
         display: flex;
-        flex-direction: row;
+        align-items: center;
         justify-content: center;
         padding: 32px 56px;
-        gap: 21px;
+        gap: var(--slider-gap);
+    }
+
+    .post-slider {
+        width: min(100%, calc((321px * 3) + (var(--slider-gap) * 2)));
+        overflow: hidden;
+    }
+
+    .post-track {
+        display: flex;
+        gap: var(--slider-gap);
+        transition: transform 0.35s ease;
+    }
+
+    .slider-btn {
+        width: 64px;
+        height: 64px;
+        flex: 0 0 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #4194AA;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+
+    .slider-btn:hover,
+    .slider-btn:focus-visible {
+        opacity: 1;
+    }
+
+    .slider-btn img {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    .slider-btn:disabled {
+        opacity: 0;
+        cursor: not-allowed;
+    }
+
+    .slider-btn:disabled:hover,
+    .slider-btn:disabled:focus-visible {
+        opacity: 0.25;
     }
 
     .imbo {
