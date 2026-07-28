@@ -216,6 +216,30 @@ main {
 
     }
 
+    .c-icon {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .see-more {
+        color: #4194AA;
+        font-family: 'Barlow';
+        font-size: 1rem;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: 20px;
+        transform: translateY(8px);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+
+    .po.show-see-more .see-more {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     .Card {
         flex: 0 0 321px;
         width: 321px;

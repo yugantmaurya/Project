@@ -13,6 +13,7 @@ const postTrack = document.querySelector('.post-track')
 const postCards = document.querySelectorAll('.post-track .Card')
 const prevBtn = document.querySelector('.prev-btn')
 const nextBtn = document.querySelector('.next-btn')
+const postSection = document.querySelector('.po')
 
 if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
     let currentIndex = 0
@@ -43,6 +44,7 @@ if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
         postTrack.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`
         prevBtn.disabled = currentIndex === 0
         nextBtn.disabled = currentIndex === maxIndex
+        postSection?.classList.toggle('show-see-more', currentIndex === maxIndex)
     }
 
     prevBtn.addEventListener('click', () => {
