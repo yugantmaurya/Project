@@ -16,6 +16,8 @@ const nextBtn = document.querySelector('.next-btn')
 
 if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
     let currentIndex = 0
+    let swipeStartX = 0
+    let swipeEndX = 0
 
     function getSliderDetails() {
         const cardWidth = postCards[0].getBoundingClientRect().width
@@ -25,6 +27,13 @@ if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
         const maxIndex = Math.max(0, postCards.length - visibleCards)
 
         return { cardWidth, gap, maxIndex }
+    }
+
+    function slideTo(index) {
+        const { maxIndex } = getSliderDetails()
+
+        currentIndex = Math.min(Math.max(index, 0), maxIndex)
+        updatePostSlider()
     }
 
     function updatePostSlider() {
@@ -37,14 +46,27 @@ if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
     }
 
     prevBtn.addEventListener('click', () => {
-        currentIndex = Math.max(0, currentIndex - 1)
-        updatePostSlider()
+        slideTo(currentIndex - 1)
     })
 
     nextBtn.addEventListener('click', () => {
-        const { maxIndex } = getSliderDetails()
-        currentIndex = Math.min(maxIndex, currentIndex + 1)
-        updatePostSlider()
+        slideTo(currentIndex + 1)
+    })
+
+    postSlider.addEventListener('pointerdown', (event) => {
+        swipeStartX = event.clientX
+        swipeEndX = event.clientX
+    })
+
+    postSlider.addEventListener('pointermove', (event) => {
+        swipeEndX = event.clientX
+    })
+
+    postSlider.addEventListener('pointerup', () => {
+        const swipeDistance = swipeEndX - swipeStartX
+
+        if (Math.abs(swipeDistance) < 50) return
+        slideTo(currentIndex + (swipeDistance < 0 ? 1 : -1))
     })
 
     window.addEventListener('resize', updatePostSlider)

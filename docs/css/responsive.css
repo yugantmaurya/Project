@@ -213,26 +213,30 @@ main .tool .tool-section .bdr {
     }
 
     main .Post {
-        padding: 24px 12px;
+        position: relative;
+        padding: 24px 0;
     }
 
     main .post-slider {
-        width: min(100%, 321px, calc(100vw - 136px));
-    }
-
-    main .Card {
-        flex-basis: min(321px, calc(100vw - 136px));
-        width: min(321px, calc(100vw - 136px));
-    }
-
-    main .imbo {
-        width: calc(100% - 30px);
+        width: 321px;
     }
 
     main .slider-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        transform: translateY(-50%);
         width: 44px;
         height: 44px;
         flex-basis: 44px;
+    }
+
+    main .prev-btn {
+        left: 8px;
+    }
+
+    main .next-btn {
+        right: 8px;
     }
 
     main .slider-btn img {

@@ -239,6 +239,7 @@ main {
     .post-slider {
         width: min(100%, calc((321px * 3) + (var(--slider-gap) * 2)));
         overflow: hidden;
+        touch-action: pan-y;
     }
 
     .post-track {
