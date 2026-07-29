@@ -240,6 +240,11 @@ main {
         pointer-events: auto;
     }
 
+    .tool-see-more {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
     .Card {
         flex: 0 0 321px;
         width: 321px;
