@@ -2,8 +2,10 @@ img {
     height: auto;
 }
 
-body {
-    min-height: 100vh;
+@media (max-width: 1439px) and (min-width: 1201px) {
+    main .Post {
+        --card-width: min(321px, calc((100vw - 112px - (var(--slider-gap) * 3)) / 4));
+    }
 }
 
 header .logo {
@@ -25,6 +27,14 @@ header .logo {
         justify-content: space-between;
     }
 
+    main .Post {
+        --card-width: min(321px, calc((100vw - 112px - (var(--slider-gap) * 2)) / 3));
+    }
+
+    main .post-slider {
+        width: calc((var(--card-width) * 3) + (var(--slider-gap) * 2));
+    }
+
     main .intro .about-me {
         width: 450px;
     }
@@ -40,9 +50,13 @@ header .logo {
 
 }
 
-@media (max-width: 1130px){
+@media (max-width: 1030px){
+    main .Post {
+        --card-width: min(321px, calc((100vw - 112px - var(--slider-gap)) / 2));
+    }
+
     main .post-slider {
-        width: min(100%, calc((321px * 2) + var(--slider-gap)));
+        width: calc((var(--card-width) * 2) + var(--slider-gap));
     }
 }
 
@@ -101,8 +115,8 @@ header .logo {
     }
 
     main .Post {
+        --card-width: min(321px, calc((100vw - 40px - var(--slider-gap)) / 2));
         padding: 28px 20px;
-        gap: 12px;
     }
 
     main .tool .tool-section {
@@ -120,10 +134,6 @@ header .logo {
 
     main .intro .image-logo {
         display: none;
-    }
-
-    main .intro .about-me {
-        width: 100%;
     }
 
     main .intro .about-me {
@@ -205,12 +215,13 @@ header .logo {
     }
 
     main .Post {
+        --card-width: min(321px, calc(100vw - 24px));
         position: relative;
         padding: 24px 0;
     }
 
     main .post-slider {
-        width: 321px;
+        width: var(--card-width);
     }
 
     main .slider-btn {
@@ -220,7 +231,6 @@ header .logo {
         transform: translateY(-50%);
         width: 44px;
         height: 44px;
-        flex-basis: 44px;
     }
 
     main .prev-btn {
@@ -268,10 +278,6 @@ header .logo {
     main .tool .tool-section img {
         width: 50px;
         height: 50px;
-    }
-
-    main .intro .image-logo img {
-        width: min(100%, 342px);
     }
 
     main .intro .sublogo {

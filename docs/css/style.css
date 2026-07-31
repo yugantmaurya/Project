@@ -49,10 +49,22 @@
     box-sizing: border-box;
 }
 
+html {
+    background-image: url(../image/hedergb.jpg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 body {
     overflow-x: hidden;
     width: 100%;
+    max-width: 1440px;
     min-height: 100vh;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.35);
 }
 
 header {
@@ -246,9 +258,9 @@ main {
     }
 
     .Card {
-        flex: 0 0 321px;
-        width: 321px;
-        height: 372px;
+        flex: 0 0 var(--card-width, 321px);
+        width: var(--card-width, 321px);
+        height: var(--card-height, 372px);
         border: 2px solid #4194AA;
         border-radius: 25px;
         display: flex;
@@ -257,16 +269,18 @@ main {
     }
 
     .Post {
-        --slider-gap: 21px;
+        --slider-gap: 14px;
+        --card-width: 321px;
+        --card-height: calc(var(--card-width) * 1.159);
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 32px 56px;
-        gap: var(--slider-gap);
     }
 
     .post-slider {
-        width: min(100%, calc((321px * 3) + (var(--slider-gap) * 2)));
+        width: min(100%, calc((var(--card-width) * 4) + (var(--slider-gap) * 3)));
         overflow: hidden;
         touch-action: pan-y;
     }
@@ -280,7 +294,10 @@ main {
     .slider-btn {
         width: 64px;
         height: 64px;
-        flex: 0 0 64px;
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        transform: translateY(-50%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -314,6 +331,14 @@ main {
         opacity: 0.25;
     }
 
+    .prev-btn {
+        left: 8px;
+    }
+
+    .next-btn {
+        right: 8px;
+    }
+
     .imbo {
         display: flex;
         justify-content: center;
@@ -321,8 +346,8 @@ main {
         border-radius: 25px;
         padding: 4px;
         border: 2px solid black;
-        height: 342px;
-        width: 291px;
+        height: calc(var(--card-height, 372px) - 30px);
+        width: calc(var(--card-width, 321px) - 30px);
         overflow: hidden;
 
         .po-img {
@@ -494,7 +519,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     min-height: 266px;
