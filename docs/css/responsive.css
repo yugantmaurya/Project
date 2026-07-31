@@ -10,14 +10,6 @@ header .logo {
     min-width: 0;
 }
 
-main .tool .tool-section {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-main .tool .tool-section .bdr {
-    width: 100%;
-}
-
 .menu {
     display: none;
 }
@@ -245,12 +237,21 @@ main .tool .tool-section .bdr {
     }
 
     main .tool .tool-section {
-        grid-template-columns: 1fr;
+        justify-content: center;
     }
 
     main .tool .tool-section .bdr {
         height: 96px;
+        width: 96px;
         border-radius: 18px;
+    }
+
+    main .tool:not(.show-all-tools) .tool-section .bdr:nth-child(n+4) {
+        display: none;
+    }
+
+    main .tool .tool-section .bdr.active {
+        width: min(631px, calc(100vw - 40px));
     }
 
     main .tool .tool-section .tool-info {

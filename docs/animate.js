@@ -14,6 +14,9 @@ const postCards = document.querySelectorAll('.post-track .Card')
 const prevBtn = document.querySelector('.prev-btn')
 const nextBtn = document.querySelector('.next-btn')
 const postSection = document.querySelector('.po')
+const toolSection = document.querySelector('.tool')
+const toolSeeMore = document.querySelector('.tool-see-more')
+const toolCards = document.querySelectorAll('.tool-section .bdr')
 
 if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
     let currentIndex = 0
@@ -73,4 +76,30 @@ if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
 
     window.addEventListener('resize', updatePostSlider)
     updatePostSlider()
+}
+
+toolCards.forEach((card) => {
+    function toggleToolCard() {
+        const isOpen = card.classList.contains('active')
+
+        card.classList.toggle('active')
+        card.setAttribute('aria-expanded', String(!isOpen))
+    }
+
+    card.addEventListener('click', toggleToolCard)
+    card.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return
+
+        event.preventDefault()
+        toggleToolCard()
+    })
+})
+
+if (toolSection && toolSeeMore) {
+    toolSeeMore.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        const isOpen = toolSection.classList.toggle('show-all-tools')
+        toolSeeMore.textContent = isOpen ? 'See Less' : 'See More'
+    })
 }

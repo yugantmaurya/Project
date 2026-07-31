@@ -336,14 +336,14 @@ main {
 
 
     .tool {
-        min-height: 524px;
+        min-height: 0;
 
         .tool-section {
-            display: grid;
-            grid-template-columns: repeat(2, 631px);
-            grid-auto-rows: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
             gap: 63px 20px;
-            padding: 66px 45px;
+            padding: 66px 56px;
 
             .tool-info {
                 display: flex;
@@ -357,6 +357,38 @@ main {
                 margin-left: 10px;
             }
 
+            .tool-name {
+                flex: 1;
+                margin: 0 24px;
+                opacity: 0;
+                overflow: hidden;
+                pointer-events: none;
+                transition: opacity 0.25s ease;
+                white-space: nowrap;
+            }
+
+            .tool-name h4 {
+                font-family: 'Barlow';
+                font-size: 1.2rem;
+                margin-bottom: 6px;
+            }
+
+            .tool-name hr {
+                width: 100%;
+                height: 1px;
+                margin: 0;
+                border: none;
+                background: black;
+            }
+
+            .tool-name p {
+                margin-top: 7px;
+                font-family: 'bitter';
+                font-size: 0.82rem;
+                line-height: 1.3;
+                white-space: normal;
+            }
+
             img {
                 width: 72px;
                 height: 72px;
@@ -367,9 +399,22 @@ main {
                 display: flex;
                 align-items: center;
                 border: 2px solid #4194AA;
-                width: 631px;
+                width: 113px;
+                max-width: 100%;
                 height: 113px;
                 border-radius: 25px;
+                overflow: hidden;
+                transition: width 0.35s ease;
+                cursor: pointer;
+            }
+
+            .bdr.active {
+                width: min(631px, 100%);
+            }
+
+            .bdr.active .tool-name {
+                opacity: 1;
+                pointer-events: auto;
             }
         }
     }
