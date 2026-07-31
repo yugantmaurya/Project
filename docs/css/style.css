@@ -409,7 +409,7 @@ main {
             }
 
             .bdr.active {
-                width: min(631px, 100%);
+                width: min(631px, calc((100% - 20px) / 2));
             }
 
             .bdr.active .tool-name {
