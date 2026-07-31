@@ -240,11 +240,12 @@ header .logo {
         justify-content: center;
         padding-left: 0;
         padding-right: 0;
+        column-gap: 14px;
     }
 
     main .tool .tool-section .bdr {
-        height: 96px;
-        width: 96px;
+        height: 88px;
+        width: 88px;
         border-radius: 18px;
     }
 
@@ -257,15 +258,16 @@ header .logo {
     }
 
     main .tool .tool-section .tool-info {
-        width: 76px;
-        height: 76px;
-        padding: 12px;
+        width: 70px;
+        height: 70px;
+        padding: 10px;
         border-radius: 16px;
+        margin-left: 8px;
     }
 
     main .tool .tool-section img {
-        width: 56px;
-        height: 56px;
+        width: 50px;
+        height: 50px;
     }
 
     main .intro .image-logo img {

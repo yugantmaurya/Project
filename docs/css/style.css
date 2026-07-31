@@ -354,7 +354,7 @@ main {
                 padding: 20px;
                 border: 2px solid black;
                 border-radius: 20px;
-                margin-left: 10px;
+                margin-left: 9px;
             }
 
             .tool-name {
@@ -416,6 +416,7 @@ main {
                 opacity: 1;
                 pointer-events: auto;
             }
+
         }
     }
 
