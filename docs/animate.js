@@ -22,6 +22,7 @@ if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
     let currentIndex = 0
     let swipeStartX = 0
     let swipeEndX = 0
+    let isSwiping = false
 
     function getSliderDetails() {
         const cardWidth = postCards[0].getBoundingClientRect().width
@@ -59,19 +60,32 @@ if (postSlider && postTrack && postCards.length && prevBtn && nextBtn) {
     })
 
     postSlider.addEventListener('pointerdown', (event) => {
+        if (event.target.closest('.slider-btn')) return
+
+        isSwiping = true
         swipeStartX = event.clientX
         swipeEndX = event.clientX
+        postSlider.setPointerCapture(event.pointerId)
     })
 
     postSlider.addEventListener('pointermove', (event) => {
+        if (!isSwiping) return
+
         swipeEndX = event.clientX
     })
 
     postSlider.addEventListener('pointerup', () => {
+        if (!isSwiping) return
+
+        isSwiping = false
         const swipeDistance = swipeEndX - swipeStartX
 
         if (Math.abs(swipeDistance) < 50) return
         slideTo(currentIndex + (swipeDistance < 0 ? 1 : -1))
+    })
+
+    postSlider.addEventListener('pointercancel', () => {
+        isSwiping = false
     })
 
     window.addEventListener('resize', updatePostSlider)

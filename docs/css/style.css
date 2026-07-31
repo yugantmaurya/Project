@@ -294,6 +294,12 @@ main {
         width: min(100%, calc((var(--card-width) * 4) + (var(--slider-gap) * 3)));
         overflow: hidden;
         touch-action: pan-y;
+        cursor: grab;
+        user-select: none;
+    }
+
+    .post-slider:active {
+        cursor: grabbing;
     }
 
     .post-track {
@@ -373,6 +379,8 @@ main {
             height: 100%;
             object-fit: cover;
             border-radius: 21px;
+            user-select: none;
+            -webkit-user-drag: none;
         }
     }
 
