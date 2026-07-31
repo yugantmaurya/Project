@@ -238,6 +238,8 @@ header .logo {
 
     main .tool .tool-section {
         justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     main .tool .tool-section .bdr {
