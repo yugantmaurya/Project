@@ -186,6 +186,32 @@ header .logo {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    footer .fot-bar .lfoot a {
+        font-size: 0;
+        gap: 0;
+    }
+
+    footer .fot-bar .lfoot img {
+        width: 18px;
+        height: 18px;
+    }
+
+    footer .fot-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    footer .fot-bar .copyright {
+        font-size: 0.8rem;
+    }
+
+    footer .fot-bar .lfoot ul {
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 12px;
+    }
 }
 
 @media (max-width: 560px) {
@@ -299,6 +325,45 @@ header .logo {
     main .intro .about-me div {
         padding: 18px;
     }
+
+    footer {
+        min-height: 266px;
+    }
+
+    footer .blank {
+        height: 153px;
+    }
+
+    footer .fot-bar {
+        min-height: 113px;
+        height: 113px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    footer .fot-bar .copyright {
+        font-size: 0.75rem;
+        text-align: left;
+    }
+
+    footer .fot-bar .lfoot {
+        display: flex;
+        align-items: center;
+    }
+
+    footer .fot-bar .lfoot ul {
+        gap: 12px;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+    }
+
+    footer .fot-bar .lfoot img {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 @media (max-width: 380px) {
@@ -319,6 +384,19 @@ header .logo {
     }
 
     footer .fot-bar {
-        font-size: 0.9rem;
+        padding: 0 14px;
+    }
+
+    footer .fot-bar .copyright {
+        font-size: 0.68rem;
+    }
+
+    footer .fot-bar .lfoot ul {
+        gap: 8px;
+    }
+
+    footer .fot-bar .lfoot img {
+        width: 16px;
+        height: 16px;
     }
 }

@@ -181,6 +181,18 @@ header {
         width: 100%;
     }
 
+    .slidebar a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .slidebar a img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+    }
+
     .slowgan {
         position: relative;
         width: fit-content;
@@ -586,7 +598,21 @@ footer {
 
             a {
                 color: white;
+                display: flex;
+                align-items: center;
+                gap: 7px;
                 text-decoration: none;
+                transition: opacity 0.2s ease;
+            }
+
+            a:hover {
+                opacity: 0.75;
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+                object-fit: contain;
             }
         }
     }
