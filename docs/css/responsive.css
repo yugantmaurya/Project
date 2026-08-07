@@ -35,10 +35,6 @@ header .logo {
         width: calc((var(--card-width) * 3) + (var(--slider-gap) * 2));
     }
 
-    main .post-page {
-        --card-width: min(321px, calc((100vw - 112px - 40px) / 3));
-    }
-
     main .intro .about-me {
         width: 450px;
     }
@@ -61,10 +57,6 @@ header .logo {
 
     main .post-slider {
         width: calc((var(--card-width) * 2) + var(--slider-gap));
-    }
-
-    main .post-page {
-        --card-width: min(321px, calc((100vw - 112px - 20px) / 2));
     }
 }
 
@@ -188,21 +180,6 @@ header .logo {
 
     }
 
-    footer .fot-bar {
-        height: auto;
-        min-height: 113px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 18px;
-        padding: 24px 20px;
-        text-align: center;
-    }
-
-    footer .fot-bar .lfoot ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     footer .fot-bar .lfoot a {
         font-size: 0;
         gap: 0;
@@ -214,8 +191,11 @@ header .logo {
     }
 
     footer .fot-bar {
+        min-height: 113px;
         flex-direction: row;
         justify-content: space-between;
+        gap: 18px;
+        padding: 24px 20px;
         text-align: left;
     }
 
@@ -269,10 +249,6 @@ header .logo {
     main .post-page-grid {
         grid-template-columns: var(--card-width);
         padding: 24px 0;
-    }
-
-    main .post-page {
-        --card-width: min(321px, calc(100vw - 24px));
     }
 
     main .slider-btn {

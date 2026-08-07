@@ -234,6 +234,10 @@ main {
         margin: 10px 5px;
     }
 
+    --slider-gap: 14px;
+    --card-width: 321px;
+    --card-height: calc(var(--card-width) * 1.159);
+
     .icon {
 
         border: 2px solid black;
@@ -292,9 +296,6 @@ main {
     }
 
     .Post {
-        --slider-gap: 14px;
-        --card-width: 321px;
-        --card-height: calc(var(--card-width) * 1.159);
         position: relative;
         display: flex;
         align-items: center;
@@ -318,11 +319,6 @@ main {
         display: flex;
         gap: var(--slider-gap);
         transition: transform 0.35s ease;
-    }
-
-    .post-page {
-        --card-width: 321px;
-        --card-height: calc(var(--card-width) * 1.159);
     }
 
     .post-page-grid {
