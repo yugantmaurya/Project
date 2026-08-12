@@ -247,8 +247,12 @@ header .logo {
     }
 
     main .post-page-grid {
-        grid-template-columns: var(--card-width);
+        grid-template-columns: 321px;
         padding: 24px 0;
+    }
+
+    main .post-page {
+        --card-width: 321px;
     }
 
     main .slider-btn {
@@ -309,6 +313,34 @@ header .logo {
 
     main .intro .sublogo {
         display: none;
+    }
+
+    main .about-page-intro {
+        flex-direction: column;
+    }
+
+    main .about-page-intro .about-me {
+        order: 1;
+        width: 100%;
+        max-width: 487px;
+        align-items: center;
+    }
+
+    main .about-page-intro .sublogo {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    main .about-page-intro .sublogo img {
+        width: min(100%, 260px);
+        border-radius: 25px;
+    }
+
+    main .about-page-intro .about-me div,
+    main .about-page-intro .about-me .Contact {
+        width: min(100%, calc(100vw - 40px));
     }
 
     main .intro .about-me .me {
